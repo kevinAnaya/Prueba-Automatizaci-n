@@ -1,12 +1,16 @@
+//version en la que estamos trabajando
 version '1.0-SNAPSHOT'
 
+//para poder utilizar caracteres especiales
 tasks.withType(JavaCompile){ options.encoding = 'UTF-8' }
 group 'org.example'
 
+//respositorio donde vamos a descargar dependencias
 repositories {
     mavenCentral()
 }
 
+//repo de donde vamos a descargar dependencias de los plugins
 buildscript {
     repositories {
         mavenCentral()
@@ -23,7 +27,7 @@ apply plugin: 'net.serenity-bdd.aggregator'
 
 defaultTasks 'clean', 'test', 'aggregate'
 
-
+//dependencias que vamos a utilizar
 dependencies {
     implementation 'net.serenity-bdd:serenity-core:2.0.81'
     implementation 'net.serenity-bdd:serenity-junit:2.0.81'
