@@ -1,5 +1,9 @@
 package com.co.utest.stepsdefinitions;
 
+import com.co.utest.tasks.CompleteForm;
+import com.co.utest.tasks.CompleteForm2;
+import com.co.utest.tasks.CompleteForm3;
+import com.co.utest.tasks.CompleteForm4;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -33,7 +37,10 @@ public class RegisterStepDefinition {
 
     @When("^the user his register$")
     public void theUserHisRegister() {
-
+        OnStage.theActorInTheSpotlight().attemptsTo(CompleteForm.enterForm());
+        OnStage.theActorInTheSpotlight().attemptsTo(CompleteForm2.enterForm2());
+        OnStage.theActorInTheSpotlight().attemptsTo(CompleteForm3.enterForm3());
+        OnStage.theActorInTheSpotlight().attemptsTo(CompleteForm4.enterForm4());
     }
 
     @Then("^the user could see a successful register message$")
