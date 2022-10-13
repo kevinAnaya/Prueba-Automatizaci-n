@@ -5,6 +5,7 @@ import com.co.utest.tasks.CompleteForm;
 import com.co.utest.tasks.CompleteForm2;
 import com.co.utest.tasks.CompleteForm3;
 import com.co.utest.tasks.CompleteForm4;
+import com.co.utest.utils.Constans;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -49,7 +50,7 @@ public class RegisterStepDefinition {
     @Then("^the user could see a successful register message$")
     public void theUserCouldSeeASuccessfulRegisterMessage() {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(ValidationMassage.compare()
-        , Matchers.is("Welcome to the world's largest community of freelance software testers!")
+        , Matchers.is(Constans.TXT_WOLCOME)
         ));
     }
 
