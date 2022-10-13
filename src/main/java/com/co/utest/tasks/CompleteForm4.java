@@ -1,5 +1,6 @@
 package com.co.utest.tasks;
 
+import com.co.utest.interactions.Wait;
 import com.co.utest.userinterfaces.RegisterPage4;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -15,7 +16,8 @@ public class CompleteForm4 implements Task {
                 (Click.on(RegisterPage4.BTN_CHECKBOX_1)),
                 (Click.on(RegisterPage4.BTN_CHECKBOX_2)),
                 (Click.on(RegisterPage4.BTN_CHECKBOX_3)),
-                (Click.on(RegisterPage4.BTN_COMPLETE))
+                (Click.on(RegisterPage4.BTN_COMPLETE)),
+                Wait.waitOn()
         );
     }
 

@@ -18,7 +18,7 @@ public class CompleteForm implements Task {
         actor.attemptsTo(Click.on(InitialPage.BTN_JOIN_TODAY),
                 (Enter.theValue("kevin").into(RegisterPage1.TXT_FIRST_NAME)),
                 (Enter.theValue("Anaya").into(RegisterPage1.TXT_LAST_NAME)),
-                (Enter.theValue("kev@correo.com").into(RegisterPage1.TXT_EMAIL)),
+                (Enter.theValue("kevi@correo.com").into(RegisterPage1.TXT_EMAIL)),
                 (Click.on(RegisterPage1.TABLE_BIRTHDAY_DATE)),
                 (SelectFromOptions.byValue("number:1").from(RegisterPage1.TABLE_BIRTHDAY_DATE)),
                 (Click.on(RegisterPage1.SELECT_BIRTHDAY_DAY)),

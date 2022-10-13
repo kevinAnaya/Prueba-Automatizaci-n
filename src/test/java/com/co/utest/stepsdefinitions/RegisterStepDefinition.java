@@ -1,5 +1,6 @@
 package com.co.utest.stepsdefinitions;
 
+import com.co.utest.questions.ValidationMassage;
 import com.co.utest.tasks.CompleteForm;
 import com.co.utest.tasks.CompleteForm2;
 import com.co.utest.tasks.CompleteForm3;
@@ -8,11 +9,13 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.Cast;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.thucydides.core.annotations.Managed;
+import org.hamcrest.Matchers;
 import org.openqa.selenium.WebDriver;
 
 public class RegisterStepDefinition {
@@ -45,7 +48,9 @@ public class RegisterStepDefinition {
 
     @Then("^the user could see a successful register message$")
     public void theUserCouldSeeASuccessfulRegisterMessage() {
-
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(ValidationMassage.compare()
+        , Matchers.is("Welcome to the world's largest community of freelance software testers!")
+        ));
     }
 
 }
